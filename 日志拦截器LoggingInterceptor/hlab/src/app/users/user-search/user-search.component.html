@@ -1,0 +1,12 @@
+<h3>Search Npm Packages</h3>
+<p><i>Searches when typing stops. Caches for 30 seconds.</i></p>
+<input (keyup)="search($event.target.value)" id="name" placeholder="Search"/>
+<input type="checkbox" id="refresh" [checked]="withRefresh" (click)="toggleRefresh()">
+<label for="refresh">with refresh</label>
+
+<ul>
+  <li *ngFor="let user of users$ | async">
+    <b>{{user.id}} name:{{user.userName}}</b> -
+    <i>{{user.password}}</i>
+  </li>
+</ul>
