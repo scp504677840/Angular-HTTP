@@ -1,0 +1,10 @@
+<div *ngFor="let userInfo of userInfos">
+  <p>Id: {{userInfo.id}}</p>
+  <p>GmtCreate: {{userInfo.gmtCreate | date:'yy-MM-dd hh:mm:ss'}}</p>
+  <p>GmtModified: {{userInfo.gmtModified | date:'yy-MM-dd hh:mm:ss'}}</p>
+  <p>UserName: {{userInfo.userName}}</p>
+  <p>Password: {{userInfo.password}}</p>
+</div>
+
+<h1>headers:</h1>
+<p *ngFor="let header of headers">{{header}}</p>
